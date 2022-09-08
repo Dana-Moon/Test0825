@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 6일, 2-05 진행중">
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 7일, 2-05 진행중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testAugust/SbbApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/QuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -88,20 +92,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Test0825ApplicationTests.testJpaQ">
-    <configuration name="HelloLombok" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.testAugust.HelloLombok" />
-      <module name="Test0825.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.testAugust.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.Test0825ApplicationTests.testChangeQuestion">
     <configuration name="Test0825ApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -125,7 +116,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Test0825ApplicationTests.testJpa" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Test0825ApplicationTests.testChangeQuestion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +129,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.testAugust.Test0825ApplicationTests.testJpa&quot;" />
+            <option value="&quot;org.example.testAugust.Test0825ApplicationTests.testChangeQuestion&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test0825ApplicationTests.testDeleteQuestion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.testAugust.Test0825ApplicationTests.testDeleteQuestion&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test0825ApplicationTests.testFindBySubjectLke" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.testAugust.Test0825ApplicationTests.testFindBySubjectLke&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,26 +208,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Test0825Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Test0825.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.testAugust.Test0825Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.testAugust.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Test0825ApplicationTests.testChangeQuestion" />
         <item itemvalue="Gradle.Test0825ApplicationTests.testJpaQ" />
-        <item itemvalue="Gradle.Test0825ApplicationTests.testJpa" />
+        <item itemvalue="Gradle.Test0825ApplicationTests.testDeleteQuestion" />
         <item itemvalue="Gradle.Test0825ApplicationTests" />
-        <item itemvalue="Spring Boot.Test0825Application" />
-        <item itemvalue="애플리케이션.org.example.testAugust.HelloLombok" />
+        <item itemvalue="Gradle.Test0825ApplicationTests.testFindBySubjectLke" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +232,8 @@
       <workItem from="1661904220892" duration="621000" />
       <workItem from="1662360334646" duration="6199000" />
       <workItem from="1662423958996" duration="12862000" />
-      <workItem from="1662526141949" duration="6796000" />
+      <workItem from="1662526141949" duration="6907000" />
+      <workItem from="1662601626460" duration="8402000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -224,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662454756066</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="9월 7일, 2-05 진행중">
+      <created>1662542110653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662542110653</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +276,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="9월 5일, 2-03 진행중" />
     <MESSAGE value="9월 6일, 2-05 진행중" />
-    <option name="LAST_COMMIT_MESSAGE" value="9월 6일, 2-05 진행중" />
+    <MESSAGE value="9월 7일, 2-05 진행중" />
+    <option name="LAST_COMMIT_MESSAGE" value="9월 7일, 2-05 진행중" />
   </component>
 </project>
