@@ -1,11 +1,15 @@
 package org.example.testAugust;
 
+import org.example.testAugust.entity.Answer;
 import org.example.testAugust.entity.Question;
+import org.example.testAugust.repository.AnswerRepository;
 import org.example.testAugust.repository.QuestionRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -19,15 +23,20 @@ public class Test0825ApplicationTests {
     @Autowired
     private QuestionRepository questionRepository;
 
+    @Autowired
+    private AnswerRepository answerRepository;
+
     @Test
     void testJpaQ() {
         Question q1 = new Question();
+        q1.setNickname("연습용회원1번");
         q1.setSubject("sbb가 무엇인가요?");
         q1.setContent("sbb에 대해서 알고 싶습니다.");
         q1.setCreateDate(LocalDateTime.now());
         this.questionRepository.save(q1);
 
         Question q2 = new Question();
+        q2.setNickname("연습용회원2번");
         q2.setSubject("스프링부트 모델 질문입니다.");
         q2.setContent("id는 자동으로 생성되나요?");
         q2.setCreateDate(LocalDateTime.now());
@@ -88,5 +97,39 @@ public class Test0825ApplicationTests {
         Question q = oq.get();
         this.questionRepository.delete(q);
         assertEquals(1, this.questionRepository.count());
+    }
+
+    @Test
+    void testAnswer() {
+        Optional<Question> oq = this.questionRepository.findById(2);
+        assertTrue(oq.isPresent());
+        Question q = oq.get();
+
+        Answer a = new Answer();
+        a.setContent("자동으로 생성됩니다.");
+        a.setQuestion(q);
+        a.setCreateDate(LocalDateTime.now());
+        this.answerRepository.save(a);
+    }
+
+    @Test
+    void testAnswerFindById() {
+        Optional<Answer> oa = this.answerRepository.findById(1);
+        assertTrue(oa.isPresent());
+        Answer a = oa.get();
+        assertEquals(2, a.getQuestion().getId());
+    }
+
+    @Transactional
+    @Test
+    void testFindQuestion() {
+        Optional<Question> oq = this.questionRepository.findById(2);
+        assertTrue(oq.isPresent());
+        Question q = oq.get();
+
+        List<Answer> answerList = q.getAnswerList();
+
+        assertEquals(1, answerList.size());
+        assertEquals("자동으로 생성됩니다.", answerList.get(0).getContent());
     }
 }
