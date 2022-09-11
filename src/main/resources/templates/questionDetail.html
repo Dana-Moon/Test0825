@@ -25,8 +25,8 @@
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <a class="mr-5 hover:text-gray-900">향수 추천</a>
             <a class="mr-5 hover:text-gray-900">매거진</a>
-            <a class="mr-5 hover:text-gray-900">커뮤니티</a>
-            <a class="mr-5 hover:text-gray-900">브랜드 검색</a>
+            <a href="/question/list" class="mr-5 hover:text-gray-900">커뮤니티</a>
+            <a href="/brand/list" class="mr-5 hover:text-gray-900">브랜드</a>
         </nav>
         <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">SIGN IN
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -63,15 +63,22 @@
                         </svg>
                     </span>
                 </div>
-                <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200">
-                    <div class="py-2 px-4 bg-white rounded-t-lg">
-                        <label for="comment" class="sr-only">Your comment</label>
-                        <textarea id="comment" rows="4" class="px-0 w-full text-sm text-gray-900 bg-white border-0" placeholder="로그인을 한 후, 댓글을 남길 수 있어요!" required></textarea>
+                <form th:action="@{|/answer/create/${question.id}|}" method="post" class="flex flex-grow flex-col mt-auto w-full">
+                    <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200">
+                        <div class="py-2 px-4 bg-white rounded-t-lg">
+                            <label for="comment" class="sr-only">Your comment</label>
+                            <textarea id="comment" name="reply" rows="4" class="px-0 w-full text-sm text-gray-900 bg-white border-0" placeholder="로그인을 한 후, 댓글을 남길 수 있어요!" required></textarea>
+                        </div>
                     </div>
-                </div>
                     <div class="flex pl-4 mt-4  w-full mx-auto">
-                        <button class="flex ml-auto text-white bg-orange-300 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">답변 등록하기</button>
+                        <button type="submit" class="flex ml-auto text-white bg-orange-300 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">답변 등록하기</button>
                     </div>
+                </form>
+                <div>
+                    <ul>
+                        <li th:each="answer : ${question.answerList}" th:text="${answer.content}"></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

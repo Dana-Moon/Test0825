@@ -30,15 +30,15 @@ public class Test0825ApplicationTests {
     void testJpaQ() {
         Question q1 = new Question();
         q1.setNickname("연습용회원1번");
-        q1.setSubject("sbb가 무엇인가요?");
-        q1.setContent("sbb에 대해서 알고 싶습니다.");
+        q1.setSubject("이것은 연습용 제목입니다");
+        q1.setContent("제목짓기는 너무 쉽습니다.");
         q1.setCreateDate(LocalDateTime.now());
         this.questionRepository.save(q1);
 
         Question q2 = new Question();
         q2.setNickname("연습용회원2번");
-        q2.setSubject("스프링부트 모델 질문입니다.");
-        q2.setContent("id는 자동으로 생성되나요?");
+        q2.setSubject("제목으로 링크가 이어집니다.");
+        q2.setContent("할 게 많군요.");
         q2.setCreateDate(LocalDateTime.now());
         this.questionRepository.save(q2);
 

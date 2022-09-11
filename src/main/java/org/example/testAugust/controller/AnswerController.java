@@ -20,9 +20,9 @@ public class AnswerController {
     private final AnswerService answerService;
 
     @PostMapping("/create/{id}")
-    public String createAnswer(Model model, @PathVariable("id") Integer id, @RequestParam String content) {
+    public String createAnswer(Model model, @PathVariable("id") Integer id, @RequestParam String reply) {
         Question question = this.questionService.getQuestionRequest(id);
-        this.answerService.create(question, content);
+        this.answerService.create(question, reply);
         return String.format("redirect:/question/detail/%s", id);
     }
 }
