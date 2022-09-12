@@ -1,8 +1,6 @@
-package org.example.testAugust.controller;
+package org.example.testAugust.brand;
 
 import lombok.RequiredArgsConstructor;
-import org.example.testAugust.entity.Brand;
-import org.example.testAugust.service.BrandService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

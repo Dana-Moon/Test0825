@@ -1,11 +1,10 @@
 package org.example.testAugust;
 
-import org.example.testAugust.entity.Answer;
-import org.example.testAugust.entity.Question;
-import org.example.testAugust.repository.AnswerRepository;
-import org.example.testAugust.repository.QuestionRepository;
+import org.example.testAugust.reply.Reply;
+import org.example.testAugust.board.Board;
+import org.example.testAugust.reply.ReplyRepository;
+import org.example.testAugust.board.BoardRepository;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -21,115 +20,115 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class Test0825ApplicationTests {
 
     @Autowired
-    private QuestionRepository questionRepository;
+    private BoardRepository boardRepository;
 
     @Autowired
-    private AnswerRepository answerRepository;
+    private ReplyRepository replyRepository;
 
     @Test
     void testJpaQ() {
-        Question q1 = new Question();
+        Board q1 = new Board();
         q1.setNickname("연습용회원1번");
-        q1.setSubject("이것은 연습용 제목입니다");
+        q1.setTitle("이것은 연습용 제목입니다");
         q1.setContent("제목짓기는 너무 쉽습니다.");
         q1.setCreateDate(LocalDateTime.now());
-        this.questionRepository.save(q1);
+        this.boardRepository.save(q1);
 
-        Question q2 = new Question();
+        Board q2 = new Board();
         q2.setNickname("연습용회원2번");
-        q2.setSubject("제목으로 링크가 이어집니다.");
+        q2.setTitle("제목으로 링크가 이어집니다.");
         q2.setContent("할 게 많군요.");
         q2.setCreateDate(LocalDateTime.now());
-        this.questionRepository.save(q2);
+        this.boardRepository.save(q2);
 
-        List<Question> all = this.questionRepository.findAll();
+        List<Board> all = this.boardRepository.findAll();
         System.out.println("-------------------------");
         assertEquals(2,all.size());
 
-        Question q = all.get(0);
+        Board q = all.get(0);
         System.out.println("-------------------------");
-        assertEquals("sbb가 무엇인가요?", q.getSubject());
+        assertEquals("sbb가 무엇인가요?", q.getTitle());
     }
 
     @Test
     void testFindByID() {
-        Optional<Question> oq = this.questionRepository.findById(1);
+        Optional<Board> oq = this.boardRepository.findById(1L);
         if (oq.isPresent()) {
-            Question q = oq.get();
-            assertEquals("sbb가 무엇인가요?", q.getSubject());
+            Board q = oq.get();
+            assertEquals("sbb가 무엇인가요?", q.getTitle());
         }
     }
 
     @Test
-    void testFindBySubject() {
-        Question q = this.questionRepository.findBySubject("sbb가 무엇인가요?");
+    void testFindByTitle() {
+        Board q = this.boardRepository.findByTitle("sbb가 무엇인가요?");
         assertEquals(1, q.getId());
     }
 
 
     @Test
-    void testFindBySubjectAndContent() {
-        Question q = this.questionRepository.findBySubjectAndContent("sbb가 무엇인가요?", "sbb에 대해서 알고 싶습니다.");
+    void testFindByTitleAndContent() {
+        Board q = this.boardRepository.findByTitleAndContent("sbb가 무엇인가요?", "sbb에 대해서 알고 싶습니다.");
         assertEquals(1, q.getId());
     }
 
     @Test
-    void testFindBySubjectLke() {
-        List<Question> qList = this.questionRepository.findBySubjectLike("sbb%");
-        Question q = qList.get(0);
-        assertEquals("sbb가 무엇인가요?", q.getSubject());
+    void testFindByTitleLke() {
+        List<Board> qList = this.boardRepository.findByTitleLike("sbb%");
+        Board q = qList.get(0);
+        assertEquals("sbb가 무엇인가요?", q.getTitle());
     }
 
     @Test
     void testChangeQuestion() {
-        Optional<Question> oq = this.questionRepository.findById(1);
+        Optional<Board> oq = this.boardRepository.findById(1L);
         assertTrue(oq.isPresent());
-        Question q = oq.get();
-        q.setSubject("수정된 제목");
-        this.questionRepository.save(q);
+        Board q = oq.get();
+        q.setTitle("수정된 제목");
+        this.boardRepository.save(q);
     }
 
     @Test
     void testDeleteQuestion() {
-        assertEquals(2, this.questionRepository.count());
-        Optional<Question> oq = this.questionRepository.findById(1);
+        assertEquals(2, this.boardRepository.count());
+        Optional<Board> oq = this.boardRepository.findById(1L);
         assertTrue(oq.isPresent());
-        Question q = oq.get();
-        this.questionRepository.delete(q);
-        assertEquals(1, this.questionRepository.count());
+        Board q = oq.get();
+        this.boardRepository.delete(q);
+        assertEquals(1, this.boardRepository.count());
     }
 
     @Test
     void testAnswer() {
-        Optional<Question> oq = this.questionRepository.findById(2);
-        assertTrue(oq.isPresent());
-        Question q = oq.get();
+        Optional<Board> ob = this.boardRepository.findById(2L);
+        assertTrue(ob.isPresent());
+        Board b = ob.get();
 
-        Answer a = new Answer();
+        Reply a = new Reply();
         a.setContent("자동으로 생성됩니다.");
-        a.setQuestion(q);
+        a.setBoard(b);
         a.setCreateDate(LocalDateTime.now());
-        this.answerRepository.save(a);
+        this.replyRepository.save(a);
     }
 
     @Test
     void testAnswerFindById() {
-        Optional<Answer> oa = this.answerRepository.findById(1);
+        Optional<Reply> oa = this.replyRepository.findById(1L);
         assertTrue(oa.isPresent());
-        Answer a = oa.get();
-        assertEquals(2, a.getQuestion().getId());
+        Reply a = oa.get();
+        assertEquals(2, a.getBoard().getId());
     }
 
     @Transactional
     @Test
     void testFindQuestion() {
-        Optional<Question> oq = this.questionRepository.findById(2);
+        Optional<Board> oq = this.boardRepository.findById(2L);
         assertTrue(oq.isPresent());
-        Question q = oq.get();
+        Board q = oq.get();
 
-        List<Answer> answerList = q.getAnswerList();
+        List<Reply> replyList = q.getReplyList();
 
-        assertEquals(1, answerList.size());
-        assertEquals("자동으로 생성됩니다.", answerList.get(0).getContent());
+        assertEquals(1, replyList.size());
+        assertEquals("자동으로 생성됩니다.", replyList.get(0).getContent());
     }
 }

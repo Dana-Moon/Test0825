@@ -1,4 +1,4 @@
-package org.example.testAugust.entity;
+package org.example.testAugust.brand;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,21 +10,18 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Question {
+public class Brand {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(length = 200, unique = true)
-    private String nickname;
+    private String brandName;
 
-    private String subject;
+    private String country;
 
     private String content;
 
     private LocalDateTime createDate;
-
-    @OneToMany(mappedBy = "question")
-    private List<Answer> answerList;
 }

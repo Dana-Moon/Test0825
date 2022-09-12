@@ -4,17 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 9-11일, 2-15 진행중 / tailwind 디자인 다수 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/brandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/BrandRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/service/BrandService.java" afterDir="false" />
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 11일, 2-15 진행중 / 댓글 넘어가기 추가 / 댓글 디자인 추가 해야함">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/board/insertBoard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/AnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/AnswerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/AnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/controller/brandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/brandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/AnswerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/repository/QuestionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/service/AnswerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/service/QuestionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/brandList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/brandList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/questionDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/questionDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/questionList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/questionList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/questionDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/questionList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +68,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
+        <option value="package-info" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -105,6 +120,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Coding\spring\Test0825\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Coding\spring\Test0825\src\main\resources\templates\board" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Test0825Application">
@@ -246,7 +264,10 @@
       <workItem from="1662878974504" duration="10646000" />
       <workItem from="1662890981408" duration="1730000" />
       <workItem from="1662902031661" duration="6647000" />
-      <workItem from="1662908752185" duration="1400000" />
+      <workItem from="1662908752185" duration="1663000" />
+      <workItem from="1662969498299" duration="2882000" />
+      <workItem from="1662973376153" duration="7511000" />
+      <workItem from="1662981666095" duration="6598000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -283,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662907262547</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="9월 11일, 2-15 진행중 / 댓글 넘어가기 추가 / 댓글 디자인 추가 해야함">
+      <created>1662910231395</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662910231395</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +334,8 @@
     <MESSAGE value="9월 7일, 2-05 진행중" />
     <MESSAGE value="9월 8일, 2-05 진행중" />
     <MESSAGE value="9월 9-11일, 2-15 진행중 / tailwind 디자인 다수 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="9월 9-11일, 2-15 진행중 / tailwind 디자인 다수 추가" />
+    <MESSAGE value="9월 11일, 2-15 진행중 / 댓글 넘어가기 추가 / 댓글 디자인 추가 해야함" />
+    <option name="LAST_COMMIT_MESSAGE" value="9월 11일, 2-15 진행중 / 댓글 넘어가기 추가 / 댓글 디자인 추가 해야함" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
