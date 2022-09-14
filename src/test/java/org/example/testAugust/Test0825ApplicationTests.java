@@ -1,5 +1,6 @@
 package org.example.testAugust;
 
+import org.example.testAugust.board.BoardService;
 import org.example.testAugust.reply.Reply;
 import org.example.testAugust.board.Board;
 import org.example.testAugust.reply.ReplyRepository;
@@ -21,6 +22,9 @@ public class Test0825ApplicationTests {
 
     @Autowired
     private BoardRepository boardRepository;
+
+    @Autowired
+    private BoardService boardService;
 
     @Autowired
     private ReplyRepository replyRepository;
@@ -130,5 +134,16 @@ public class Test0825ApplicationTests {
 
         assertEquals(1, replyList.size());
         assertEquals("자동으로 생성됩니다.", replyList.get(0).getContent());
+    }
+
+    @Test
+    void testJpa() {
+        for(int i=1; i <= 20; i++) {
+            String category = "test";
+            String title = String.format("테스트 데이터입니다. : [%03d]", i);
+            String nickname = "";
+            String content = "테스트 내용";
+            this.boardService.insertBoard(category, title, nickname, content);
+        }
     }
 }

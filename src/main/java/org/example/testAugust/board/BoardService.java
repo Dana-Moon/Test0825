@@ -2,8 +2,9 @@ package org.example.testAugust.board;
 
 import lombok.RequiredArgsConstructor;
 import org.example.testAugust.DataNotFoundException;
-import org.example.testAugust.board.Board;
-import org.example.testAugust.board.BoardRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,7 +29,7 @@ public class BoardService {
         if (question.isPresent()) {
             return question.get();
         } else {
-            throw new DataNotFoundException("question noe found");
+            throw new DataNotFoundException("question not found");
         }
     }
 
@@ -40,5 +41,14 @@ public class BoardService {
         board.setContent(content);
         board.setCreateDate(LocalDateTime.now());
         this.boardRepository.save(board);
+    }
+
+    public List<Board> searchEmail(String boardSearch) {
+        return this.boardRepository.findBoardsByTitle(boardSearch);
+    }
+
+    public Page<Board> getList(int page) {
+        Pageable pageable = PageRequest.of(page, 10);
+        return this.boardRepository.findAll(pageable);
     }
 }

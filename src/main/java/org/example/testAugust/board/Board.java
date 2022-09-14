@@ -28,11 +28,11 @@ public class Board {
 
     private String content;
 
-    private Long views;
-
-    private int recommendNumber;
-
-    private int reportNumber;
+//    private Long views;
+//
+//    private int recommendNumber;
+//
+//    private int reportNumber;
 
     private LocalDateTime createDate;
 

@@ -1,8 +1,6 @@
 package org.example.testAugust.brand;
 
 import lombok.RequiredArgsConstructor;
-import org.example.testAugust.brand.Brand;
-import org.example.testAugust.brand.BrandRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

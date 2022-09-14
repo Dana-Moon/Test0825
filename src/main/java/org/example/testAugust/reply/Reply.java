@@ -19,9 +19,9 @@ public class Reply {
     @Column
     private String content;
 
-    private int recommendNumber;
-
-    private int reportNumber;
+//    private int recommendNumber;
+//
+//    private int reportNumber;
 
     private LocalDateTime createDate;
 

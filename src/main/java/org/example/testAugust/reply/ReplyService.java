@@ -1,9 +1,7 @@
 package org.example.testAugust.reply;
 
 import lombok.RequiredArgsConstructor;
-import org.example.testAugust.reply.Reply;
 import org.example.testAugust.board.Board;
-import org.example.testAugust.reply.ReplyRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
