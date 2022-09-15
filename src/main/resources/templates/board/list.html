@@ -28,15 +28,16 @@
         </button>
     </nav>
 </header>
+<!--헤더 끝-->
 
-<!--메인(질문 목록)-->
+<!--메인-->
 <section class="text-gray-600 body-font">
     <div class="container px-5 pt-10 pb-48 mx-auto">
         <div class="flex flex-col text-center w-full mb-4">
             <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">커뮤니티</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">사랑하는 회원님들의 글입니다. 소중하게 대해주세요.</p>
         </div>
-
+<!--게시글 검색하기-->
         <form>
             <label for="boardSearch" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
             <div class="relative lg:w-2/6 w-full mx-auto overflow-auto">
@@ -47,11 +48,13 @@
                 <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-orange-300 hover:bg-orange-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2">게시글 검색</button>
             </div>
         </form>
+<!--        게시글 작성버튼-->
         <div class="flex pl-4 my-2 lg:w-2/3 w-full mx-auto">
             <a class="flex ml-auto text-white text-sm bg-orange-300 border-0 py-2 px-6  focus:outline-none hover:bg-orange-400 rounded-lg" th:href="@{/board/insert}">
                 <button >게시글 쓰기</button>
             </a>
         </div>
+<!--        게시글 목록-->
         <div class="lg:w-5/6 w-full mx-auto overflow-auto">
             <table class="table-auto w-full text-left whitespace-no-wrap">
                 <thead>
@@ -100,8 +103,9 @@
 <!--        페이징처리 끝-->
     </div>
 </section>
+<!--메인 끝-->
 
-<!--푸터(우리 사이트 관련 링크)-->
+<!--푸터-->
 <footer class="text-gray-600 body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -139,5 +143,6 @@
     </span>
     </div>
 </footer>
+<!--푸터 끝-->
 </body>
 </html>

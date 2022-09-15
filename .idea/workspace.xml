@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 12일, 2-15 완료 / 댓글 디자인 추가 해야함/ 게시글 등록 폼 완료(카테고리 설정 완료. 조회수 카운트 후, 반환하는 것 이후 추가할 것.)">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/magazine/insertMagazine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/magazine/magazineList.html" afterDir="false" />
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 14일, 2-15 완료 / 페이징 진행 중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/BrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/insertBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/insertBoard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/magazine/insertMagazine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/magazine/insertMagazine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/magazine/magazineList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/magazine/magazineList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,6 +252,10 @@
       <workItem from="1662981666095" duration="10090000" />
       <workItem from="1663040885814" duration="5669000" />
       <workItem from="1663065003317" duration="8215000" />
+      <workItem from="1663114031185" duration="4310000" />
+      <workItem from="1663222590238" duration="658000" />
+      <workItem from="1663228254710" duration="48000" />
+      <workItem from="1663228522091" duration="1159000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -311,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662994590682</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="9월 14일, 2-15 완료 / 페이징 진행 중">
+      <created>1663114366523</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663114366523</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +338,8 @@
     <MESSAGE value="9월 9-11일, 2-15 진행중 / tailwind 디자인 다수 추가" />
     <MESSAGE value="9월 11일, 2-15 진행중 / 댓글 넘어가기 추가 / 댓글 디자인 추가 해야함" />
     <MESSAGE value="9월 12일, 2-15 완료 / 댓글 디자인 추가 해야함/ 게시글 등록 폼 완료(카테고리 설정 완료. 조회수 카운트 후, 반환하는 것 이후 추가할 것.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="9월 12일, 2-15 완료 / 댓글 디자인 추가 해야함/ 게시글 등록 폼 완료(카테고리 설정 완료. 조회수 카운트 후, 반환하는 것 이후 추가할 것.)" />
+    <MESSAGE value="9월 14일, 2-15 완료 / 페이징 진행 중" />
+    <option name="LAST_COMMIT_MESSAGE" value="9월 14일, 2-15 완료 / 페이징 진행 중" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

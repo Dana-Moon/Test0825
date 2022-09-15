@@ -6,6 +6,7 @@
     <title>새글 쓰기</title>
 </head>
 <body>
+<!--헤더(내비게이션)-->
 <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -27,7 +28,9 @@
         </button>
     </div>
 </header>
+<!--헤더 끝-->
 
+<!--메인-->
 <section class="text-gray-600 body-font">
     <div class="container px-5 pt-10 pb-48 lg:w-4/6 mx-auto">
         <div class="grid grid-cols-1 mb-4">
@@ -58,6 +61,7 @@
                 <div class="mb-4">
                     <label for="editor" class="block mb-2 text-sm font-medium text-gray-900">내용</label>
                     <div class="w-full bg-gray-50 rounded-lg border border-gray-200">
+<!--                        글 상단부 버튼-->
                         <div class="flex justify-between items-center py-2 px-3 border-b">
                             <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x">
                                 <div class="flex items-center space-x-1 sm:pr-4">
@@ -78,6 +82,7 @@
                                 </div>
                             </div>
                         </div>
+<!--                        글 내용 작성부분-->
                         <div class="py-2 px-4 bg-white rounded-b-lg">
                             <textarea id="editor" name="content" rows="8" class=" block px-0 w-full text-sm text-gray-800 bg-white resize-none border-0 focus:ring-0" placeholder="내용을 입력해주세요" required=""></textarea>
                         </div>
@@ -94,7 +99,9 @@
         </form>
     </div>
 </section>
+<!--메인 끝-->
 
+<!--푸터-->
 <footer class="text-gray-600 body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -132,6 +139,6 @@
     </span>
     </div>
 </footer>
-
+<!--푸터 끝-->
 </body>
 </html>
