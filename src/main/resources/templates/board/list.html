@@ -55,7 +55,7 @@
             </a>
         </div>
 <!--        게시글 목록-->
-        <div class="lg:w-5/6 w-full mx-auto overflow-auto">
+        <div class="lg:w-5/6 w-full mx-auto mb-9 pb-3 overflow-auto border-b border-gray-300">
             <table class="table-auto w-full text-left whitespace-no-wrap">
                 <thead>
                     <tr>
@@ -63,7 +63,7 @@
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">작성자</th>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">제목</th>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">등록일</th>
-                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">조회수</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">조회수</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,25 +81,30 @@
             </table>
         </div>
 <!--        페이징처리 시작-->
-        <div th:if="${!paging.isEmpty()}" aria-label="Page navigation">
-            <ul class="inline-flex">
-                <li>
-                    <a class="px-3 py-2 text-gray-500 bg-white rounded-1-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700" th:classappend="${paging.number == 0} ? 'cursor-not-allowed'" th:href="@{|?page=${(paging.number)-1}|}">
+        <nav th:if="${!paging.isEmpty()}" aria-label="Page navigation" class="flex justify-center">
+            <ul class="inline-flex -space-x-px">
+                <li class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                    <span th:if="${paging.number == 0}" class="cursor-not-allowed" th:href="@{|?page=${(paging.number)-1}|}">이전
+                    </span>
+                    <a th:unless="${paging.number == 0}" th:href="@{|?page=${(paging.number)-1}|}">
                         <span>이전</span>
                     </a>
                 </li>
                 <li th:each="page : ${#numbers.sequence(0, (paging.totalPages)-1)}"
+                    th:if="${page >= (paging.number)-2 and page <= (paging.number)+2}"
                     th:classappend="${page == paging.number} ? 'active'"
-                    class="">
-                    <a th:text="${page}" class="px-3 py-2 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700" th:href="@{|?page=${page}|}"></a>
+                    class="px-3 py-2 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                    <a th:text="${page}" th:href="@{|?page=${page}|}"></a>
                 </li>
-                <li>
-                    <a class="px-3 py-2 text-gray-500 bg-white rounded-1-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700" th:classappend="${!paging.hasNext} ? 'cursor-not-allowed'" th:href="@{|?page=${(paging.number)+1}|}">
+                <li class="px-3 py-2 text-gray-500 bg-white rounded-1-lg border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
+                    <span th:if="${paging.number == (paging.totalPages)-1}" class="cursor-not-allowed" th:href="@{|?page=${(paging.number)+1}|}">다음
+                    </span>
+                    <a th:unless="${paging.number == (paging.totalPages)-1}"  th:href="@{|?page=${(paging.number)+1}|}">
                         <span>다음</span>
                     </a>
                 </li>
             </ul>
-        </div>
+        </nav>
 <!--        페이징처리 끝-->
     </div>
 </section>

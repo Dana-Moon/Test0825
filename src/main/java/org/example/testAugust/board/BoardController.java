@@ -17,7 +17,7 @@ public class BoardController {
 
     //게시판 목록
     @RequestMapping("/list")
-    public String list(Model model, @RequestParam(value="page", defaultValue = "0") int page) {
+    public String list(Model model, @RequestParam(value="page", defaultValue = "1") int page) {
 //        List<Board> boardList = this.boardService.getList();
 //        model.addAttribute("boardList", boardList);
         Page<Board> paging = this.boardService.getList(page);
