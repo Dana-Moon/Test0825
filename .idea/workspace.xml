@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 15일, html 수정(paging 진행중)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/MainController.java" afterDir="false" />
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 18-19일, html 수정(paging 이전 다음 버튼 각 끝 장에서 비활성화 되도록 완성. 페이지 리스트 자르기 완성. 글 쓴 역순으로 게시글 1페이지부터 나타나도록 완성.)&#10;이후 추가할 것 - 활성화된 페이지 강조 디자인 넣기. 처음, 끝 링크 만들기. ...으로 표현된 페이지 줄임 표시 만들기.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -257,7 +254,12 @@
       <workItem from="1663228522091" duration="1159000" />
       <workItem from="1663251696867" duration="94000" />
       <workItem from="1663482273180" duration="5334000" />
-      <workItem from="1663591753449" duration="1775000" />
+      <workItem from="1663591753449" duration="2611000" />
+      <workItem from="1663633656016" duration="5842000" />
+      <workItem from="1663721336127" duration="1008000" />
+      <workItem from="1663746328629" duration="327000" />
+      <workItem from="1663747437462" duration="2998000" />
+      <workItem from="1663750831964" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -322,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663251757997</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="9월 18-19일, html 수정(paging 이전 다음 버튼 각 끝 장에서 비활성화 되도록 완성. 페이지 리스트 자르기 완성. 글 쓴 역순으로 게시글 1페이지부터 나타나도록 완성.)&#10;이후 추가할 것 - 활성화된 페이지 강조 디자인 넣기. 처음, 끝 링크 만들기. ...으로 표현된 페이지 줄임 표시 만들기.">
+      <created>1663594601163</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663594601164</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +358,8 @@
     <MESSAGE value="9월 12일, 2-15 완료 / 댓글 디자인 추가 해야함/ 게시글 등록 폼 완료(카테고리 설정 완료. 조회수 카운트 후, 반환하는 것 이후 추가할 것.)" />
     <MESSAGE value="9월 14일, 2-15 완료 / 페이징 진행 중" />
     <MESSAGE value="9월 15일, html 수정(paging 진행중)" />
-    <option name="LAST_COMMIT_MESSAGE" value="9월 15일, html 수정(paging 진행중)" />
+    <MESSAGE value="9월 18-19일, html 수정(paging 이전 다음 버튼 각 끝 장에서 비활성화 되도록 완성. 페이지 리스트 자르기 완성. 글 쓴 역순으로 게시글 1페이지부터 나타나도록 완성.)&#10;이후 추가할 것 - 활성화된 페이지 강조 디자인 넣기. 처음, 끝 링크 만들기. ...으로 표현된 페이지 줄임 표시 만들기." />
+    <option name="LAST_COMMIT_MESSAGE" value="9월 18-19일, html 수정(paging 이전 다음 버튼 각 끝 장에서 비활성화 되도록 완성. 페이지 리스트 자르기 완성. 글 쓴 역순으로 게시글 1페이지부터 나타나도록 완성.)&#10;이후 추가할 것 - 활성화된 페이지 강조 디자인 넣기. 처음, 끝 링크 만들기. ...으로 표현된 페이지 줄임 표시 만들기." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

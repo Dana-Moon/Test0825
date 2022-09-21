@@ -92,7 +92,6 @@
                 </li>
                 <li th:each="page : ${#numbers.sequence(0, (paging.totalPages)-1)}"
                     th:if="${page >= (paging.number)-2 and page <= (paging.number)+2}"
-                    th:classappend="${page == paging.number} ? 'active'"
                     class="px-3 py-2 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
                     <a th:text="${page}" th:href="@{|?page=${page}|}"></a>
                 </li>
