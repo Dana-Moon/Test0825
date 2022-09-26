@@ -16,9 +16,8 @@ public class MemberService {
 
 //    public OppuMember insertMember(String userId, String nickname, String password, String email, int accrueReportNumber, LocalDateTime recentLoginDate, String stopYN) { return null;}
 
-    public OppuMember insertMember(OppuMember oppuMember) {
+    public void insertMember(OppuMember oppuMember) {
         oppuMember.setPassword(passwordEncoder.encode(oppuMember.getPassword()));
         this.memberRepository.save(oppuMember);
-        return oppuMember;
     }
 }

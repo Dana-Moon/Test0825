@@ -5,9 +5,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.List;
 
 @RequestMapping("/board")
 @RequiredArgsConstructor
@@ -17,21 +14,21 @@ public class BoardController {
     private final BoardService boardService;
 
     //게시판 목록
-    @RequestMapping("/list")
+    @RequestMapping("/boardList")
     public String list(Model model, @RequestParam(value="page", defaultValue = "0") int page) {
 //        List<Board> boardList = this.boardService.getList();
 //        model.addAttribute("boardList", boardList);
         Page<Board> paging = this.boardService.getList(page);
         model.addAttribute("paging", paging);
-        return "/board/list";
+        return "/board/boardList";
     }
 
     //게시판 상세보기
-    @RequestMapping(value = "/detail/{id}")
+    @RequestMapping(value = "/getBoard/{id}")
     public String detail(Model model, @PathVariable("id") Long id) {
         Board board = this.boardService.getBoardRequest(id);
         model.addAttribute("board", board);
-        return "/board/detail";
+        return "/board/getBoard";
     }
 
     //detail 메소드에 GetMapping 해보기
@@ -59,7 +56,7 @@ public class BoardController {
     @PostMapping("/insert")
     public String insertBoard(@RequestParam String category, @RequestParam String title, @RequestParam String nickname, @RequestParam String content) {
         this.boardService.insertBoard(category, title, nickname, content);
-        return "redirect:/board/list";
+        return "redirect:/board/boardList";
     }
 
 //    @PostMapping("/search")

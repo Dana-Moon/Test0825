@@ -18,6 +18,6 @@ public class brandController {
     public String list(Model model) {
         List<Brand> brandList = this.brandService.getList();
         model.addAttribute("brandList", brandList);
-        return "brandList";
+        return "/brand/brandList";
     }
 }
