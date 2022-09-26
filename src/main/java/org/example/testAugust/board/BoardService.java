@@ -22,9 +22,9 @@ public class BoardService {
         return this.boardRepository.findAll();
     }
 
-    public Optional<Board> getBoard(Board board) {
-        return boardRepository.findById(board.getId());
-    }
+//    public Optional<Board> getBoard(Board board) {
+//        return boardRepository.findById(board.getId());
+//    }
 
     public Board getBoardRequest(Long id) {
         Optional<Board> question = this.boardRepository.findById(id);
@@ -45,9 +45,9 @@ public class BoardService {
         this.boardRepository.save(board);
     }
 
-    public List<Board> searchEmail(String boardSearch) {
-        return this.boardRepository.findBoardsByTitle(boardSearch);
-    }
+//    public List<Board> searchTitle(String boardSearch) {
+//        return this.boardRepository.findBoardsByTitle(boardSearch);
+//    }
 
     public Page<Board> getList(int page) {
         List<Sort.Order> sorts = new ArrayList<>();

@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class BoardController {
 
     //게시판 목록
     @RequestMapping("/list")
-    public String list(Model model, @RequestParam(value="page", defaultValue = "1") int page) {
+    public String list(Model model, @RequestParam(value="page", defaultValue = "0") int page) {
 //        List<Board> boardList = this.boardService.getList();
 //        model.addAttribute("boardList", boardList);
         Page<Board> paging = this.boardService.getList(page);
@@ -62,8 +63,9 @@ public class BoardController {
     }
 
 //    @PostMapping("/search")
-//    public String searchBoard(@RequestParam("boardSearch") String boardSearch) {
-//        this.boardService.searchEmail(boardSearch);
+//    public String searchBoard(@RequestParam String boardSearch, RedirectAttributes reAt, @RequestParam(value="page", defaultValue = "0") int page) {
+//        List<Board> paging = this.boardService.searchTitle(boardSearch);
+//        reAt.addFlashAttribute("paging", paging);
 //        return "redirect:/board/list";
 //    }
 }

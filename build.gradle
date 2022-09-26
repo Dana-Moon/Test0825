@@ -33,6 +33,9 @@ dependencies {
     implementation 'com.oracle.database.security:osdt_core'
     implementation 'com.oracle.database.security:osdt_cert'
 
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
 }
 
 test {

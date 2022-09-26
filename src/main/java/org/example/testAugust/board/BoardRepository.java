@@ -18,5 +18,6 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
     List<Board> findBoardsByTitle(String boardSearch);
 
     Page<Board> findAll(Pageable pageable);
+    //page에서 쿼리로 걸러서 검색에 날리면 된다.(검색 기능 할 때, 여기서 이미 걸러서 날리면 된다.)
 
 }
