@@ -14,7 +14,7 @@ public class brandController {
 
     private final BrandService brandService;
 
-    @RequestMapping("/list")
+    @RequestMapping("/brandList")
     public String list(Model model) {
         List<Brand> brandList = this.brandService.getList();
         model.addAttribute("brandList", brandList);

@@ -1,6 +1,7 @@
 package org.example.testAugust.member;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class MemberController {
         return "/member/signupForm";
     }
     @PostMapping("/signup")
-    public String signup(@Valid UserInsertForm userInsertForm, BindingResult bindingResult, OppuMember oppuMember) {
+    public String signup(@Valid UserInsertForm userInsertForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "/member/signupForm";
         }
@@ -29,8 +30,16 @@ public class MemberController {
             bindingResult.rejectValue("password2", "passwordInCorrect", "비밀번호가 일치하지 않습니다.");
             return "/member/signupForm";
         }
-        memberService.insertMember(oppuMember);
-
+        try {
+            memberService.insertMember(userInsertForm.getUserId(), userInsertForm.getNickname(), userInsertForm.getPassword1(), userInsertForm.getEmail());
+        } catch (DataIntegrityViolationException e) {
+            e.printStackTrace();
+            bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
+            return "/member/signupForm";
+        } catch (Exception e) {
+            e.printStackTrace();
+            bindingResult.reject("signupFailed", e.getMessage());
+        }
         return "redirect:/";
     }
 }
