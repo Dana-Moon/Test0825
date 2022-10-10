@@ -10,12 +10,37 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 public class OppuMember {
+//
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private Long id;
+//
+//    @Column(unique = true)
+//    private String userId;
+//
+//    @Column(unique = true)
+//    private String nickname;
+//
+//    private String password;
+//
+//    @Column(unique = true)
+//    private String email;
+//
+//    private int accrueReportNumber;
+//
+//    private LocalDateTime recentLoginDate;
+//
+//    private String stopYN;
+//
+//    @Enumerated(EnumType.STRING)
+//    private Role role;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userId;
+    @Column(unique = true)
+    private String username;
 
     @Column(unique = true)
     private String nickname;
@@ -24,10 +49,4 @@ public class OppuMember {
 
     @Column(unique = true)
     private String email;
-
-    private int accrueReportNumber;
-
-    private LocalDateTime recentLoginDate;
-
-    private String stopYN;
 }

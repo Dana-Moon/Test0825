@@ -2,6 +2,7 @@ package org.example.testAugust.admin;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.testAugust.constant.Role;
 
 import javax.persistence.*;
 
@@ -24,4 +25,5 @@ public class Admin {
 
     @Column(unique = true)
     private String email;
+
 }

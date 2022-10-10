@@ -22,21 +22,29 @@ public class Board {
     private String nickname;
 
     //게시글 카테고리
-    private String Category;
+//    @Column(nullable = false)
+    private String category;
 
     //게시글 제목
+//    @Column(nullable = false)
     private String title;
 
     //게시글 작성자
+//    @Column(nullable = false)
     private String writer;
 
     //게시글 내용
+//    @Column(columnDefinition = "TEXT")
     private String content;
 
-//    private Long views;
+    //게시글 조회수
+//    @Column(columnDefinition = "integer default 0", nullable = false)
+//    private int view;
 //
+//    //게시글 추천수
 //    private int recommendNumber;
 //
+//    //게시글 신고수
 //    private int reportNumber;
 
     private LocalDateTime createDate;

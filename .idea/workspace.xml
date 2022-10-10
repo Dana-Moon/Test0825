@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="9월 27일, board html 경로 수정. 리팩터링 완료. 회원가입 진행 중. input 부분 다시 확인할 것. 중복 이메일 오류 만들기.">
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/constant/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberSecurityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/loginForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/brandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/brand/brandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/admin/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/OppuMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/OppuMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/UserInsertForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/UserInsertForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/boardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/boardList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/signupForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/signupForm.html" afterDir="false" />
     </list>
@@ -53,8 +69,8 @@
       <list>
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -89,7 +105,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Coding/javascript&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Coding/spring/SBB&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,6 +130,12 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Coding\spring\Test0825\src\main\resources\templates\brand" />
       <recent name="C:\Users\user\Desktop\Coding\spring\Test0825\src\main\resources\templates\board" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.example.testAugust.board" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.testAugust.member" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Test0825Application">
@@ -282,7 +304,18 @@
       <workItem from="1664202551032" duration="5104000" />
       <workItem from="1664239857008" duration="4667000" />
       <workItem from="1664340465084" duration="1208000" />
-      <workItem from="1664794591875" duration="10536000" />
+      <workItem from="1664794591875" duration="13329000" />
+      <workItem from="1664841910359" duration="8751000" />
+      <workItem from="1664873429261" duration="620000" />
+      <workItem from="1664892658067" duration="3258000" />
+      <workItem from="1664929065763" duration="10487000" />
+      <workItem from="1665033115820" duration="10639000" />
+      <workItem from="1665101059997" duration="11145000" />
+      <workItem from="1665206430329" duration="11471000" />
+      <workItem from="1665220890055" duration="285000" />
+      <workItem from="1665301957977" duration="2585000" />
+      <workItem from="1665304721881" duration="9290000" />
+      <workItem from="1665411087538" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -375,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664207634974</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태">
+      <created>1664811365504</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664811365504</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +446,8 @@
     <MESSAGE value="9월 21일, 리스트 active 클래스 삭제. active 효과 추가하는 것 확인할 것. 이후 추가할 것 - 활성화된 페이지 강조 디자인 넣기. 처음, 끝 링크 만들기. ...으로 표현된 페이지 줄임 표시 만들기 고려." />
     <MESSAGE value="9월 26일, 회원가입 service와 password encoder 설정, 회원가입 form 설정 완료." />
     <MESSAGE value="9월 27일, board html 경로 수정. 리팩터링 완료. 회원가입 진행 중. input 부분 다시 확인할 것. 중복 이메일 오류 만들기." />
-    <option name="LAST_COMMIT_MESSAGE" value="9월 27일, board html 경로 수정. 리팩터링 완료. 회원가입 진행 중. input 부분 다시 확인할 것. 중복 이메일 오류 만들기." />
+    <MESSAGE value="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
+    <option name="LAST_COMMIT_MESSAGE" value="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

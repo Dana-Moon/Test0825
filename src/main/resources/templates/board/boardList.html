@@ -22,12 +22,12 @@
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
                 <input type="search" id="boardSearch" name="boardSearch" class="w-full block p-4 pl-10 text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-gray-500 focus:border-gray-500" placeholder="검색하고 싶은 게시글 제목 제시어를 입력해주세요" required="">
-                <button type="submit" value="boardSearch" class="text-white absolute right-2.5 bottom-2.5 bg-orange-300 hover:bg-orange-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2">게시글 검색</button>
+                <button type="submit" value="boardSearch" class="text-white absolute right-2.5 bottom-2.5 bg-rose-300 hover:bg-rose-400 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2">게시글 검색</button>
             </div>
         </form>
 <!--        게시글 작성버튼-->
         <div class="flex pl-4 my-2 lg:w-2/3 w-full mx-auto">
-            <a class="flex ml-auto text-white text-sm bg-orange-300 border-0 py-2 px-6  focus:outline-none hover:bg-orange-400 rounded-lg" th:href="@{/board/insert}">
+            <a class="flex ml-auto text-white text-sm bg-rose-300 border-0 py-2 px-6  focus:outline-none hover:bg-orange-400 rounded-lg" th:href="@{/board/insert}">
                 <button >게시글 쓰기</button>
             </a>
         </div>
@@ -48,7 +48,7 @@
                         <td class="px-4 py-3" th:text="${board.id}"></td>
                         <td class="px-4 py-3" th:text="${board.nickname}"></td>
                         <td class="px-4 py-3">
-                            <a th:href="@{|/board/detail/${board.id}|}" th:text="${board.title}"></a>
+                            <a th:href="@{|/board/getBoard/${board.id}|}" th:text="${board.title}"></a>
                             <span class="text-sm text-gray-600" th:if="|(${#lists.size(board.replyList) > 0})|" th:text="|(${#lists.size(board.replyList)})|"></span>
                         </td>
                         <td class="px-4 py-3" th:text="${board.createDate}"></td>

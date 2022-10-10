@@ -16,8 +16,6 @@ public class BoardController {
     //게시판 목록
     @RequestMapping("/boardList")
     public String list(Model model, @RequestParam(value="page", defaultValue = "0") int page) {
-//        List<Board> boardList = this.boardService.getList();
-//        model.addAttribute("boardList", boardList);
         Page<Board> paging = this.boardService.getList(page);
         model.addAttribute("paging", paging);
         return "/board/boardList";
@@ -27,6 +25,7 @@ public class BoardController {
     @RequestMapping(value = "/getBoard/{id}")
     public String detail(Model model, @PathVariable("id") Long id) {
         Board board = this.boardService.getBoardRequest(id);
+//        this.boardService.updateView(id);
         model.addAttribute("board", board);
         return "/board/getBoard";
     }
