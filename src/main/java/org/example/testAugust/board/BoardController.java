@@ -1,10 +1,15 @@
 package org.example.testAugust.board;
 
 import lombok.RequiredArgsConstructor;
+import org.example.testAugust.member.MemberService;
+import org.example.testAugust.member.OppuMember;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @RequestMapping("/board")
 @RequiredArgsConstructor
@@ -12,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class BoardController {
 
     private final BoardService boardService;
+    private final MemberService memberService;
 
     //게시판 목록
     @RequestMapping("/boardList")
@@ -46,22 +52,28 @@ public class BoardController {
 //    }
 
     //게시판 새글쓰기
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/insert")
     public String insertBoard() {
         return "/board/insertBoard";
     }
 
     //게시판 새글쓰기
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/insert")
-    public String insertBoard(@RequestParam String category, @RequestParam String title, @RequestParam String nickname, @RequestParam String content) {
-        this.boardService.insertBoard(category, title, nickname, content);
+    public String insertBoard(@RequestParam String category,
+                              @RequestParam String title,
+                              @RequestParam String content,
+                              Principal principal) {
+        OppuMember oppuMember = this.memberService.getMember(principal.getName());
+        this.boardService.insertBoard(category, title, oppuMember, content);
         return "redirect:/board/boardList";
     }
 
-//    @PostMapping("/search")
-//    public String searchBoard(@RequestParam String boardSearch, RedirectAttributes reAt, @RequestParam(value="page", defaultValue = "0") int page) {
-//        List<Board> paging = this.boardService.searchTitle(boardSearch);
-//        reAt.addFlashAttribute("paging", paging);
-//        return "redirect:/board/list";
+//    @PostMapping("/insert")
+//    public String insertBoard(@RequestParam String category, @RequestParam String title, @RequestParam String nickname, @RequestParam String content) {
+//        this.boardService.insertBoard(category, title, nickname, content);
+//        return "redirect:/board/boardList";
 //    }
+
 }

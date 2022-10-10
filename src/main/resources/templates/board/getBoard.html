@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,7 @@
                 <a class="inline-flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
                     <img alt="blog" src="https://dummyimage.com/104x104" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                     <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900" th:text="${board.nickname}"></span>
+                        <span class="title-font font-medium text-gray-900" th:text="${board.writer.nickname}"></span>
                         <span class="text-gray-400 text-xs tracking-widest mt-0.5" th:text="${board.createDate}"></span>
                     </span>
                 </a>
@@ -30,6 +30,9 @@
                 <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4" th:text="${board.title}"></h2>
                 <p class="leading-relaxed mb-8" th:text="${board.content}"></p>
                 <div class="flex items-center flex-wrap pt-4 mb-4 border-t-2 border-gray-100 mt-auto w-full">
+                    <div>
+                        <button></button>
+                    </div>
                     <span class="text-gray-400 inline-flex items-center leading-none text-sm" th:text="|${#lists.size(board.replyList)}개의 답변이 있습니다.|">
                         <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                           <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
@@ -52,7 +55,7 @@
                 <div class="grid grid-col-1">
                     <ul class="divide-y divide-gray-200">
                         <li th:each="reply : ${board.replyList}">
-                            <div>댓글 작성자 닉네임</div>
+                            <div th:if="${reply.writer != null}" th:text="${reply.writer.nickname}"></div>
                             <div th:text="${reply.content}"></div>
                         </li>
                     </ul>

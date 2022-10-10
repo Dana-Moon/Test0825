@@ -4,32 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/constant/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberSecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/member/loginForm.html" afterDir="false" />
+    <list default="true" id="a89c2ce5-2e97-42f7-af0a-4766f9261330" name="변경" comment="10월 10일, 로그인 완료. 로그아웃 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/admin/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/board/BoardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/OppuMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/OppuMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/UserInsertForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/UserInsertForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/member/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/testAugust/reply/ReplyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/boardList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/boardList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/signupForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/signupForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/getBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/getBoard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testAugust/Test0825ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +305,7 @@
       <workItem from="1665220890055" duration="285000" />
       <workItem from="1665301957977" duration="2585000" />
       <workItem from="1665304721881" duration="9290000" />
-      <workItem from="1665411087538" duration="1532000" />
+      <workItem from="1665411087538" duration="9096000" />
     </task>
     <task id="LOCAL-00001" summary="9월 5일, 2-03 진행중">
       <created>1662366553812</created>
@@ -415,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664811365504</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="10월 10일, 로그인 완료. 로그아웃 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태">
+      <created>1665413007266</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665413007266</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +444,8 @@
     <MESSAGE value="9월 26일, 회원가입 service와 password encoder 설정, 회원가입 form 설정 완료." />
     <MESSAGE value="9월 27일, board html 경로 수정. 리팩터링 완료. 회원가입 진행 중. input 부분 다시 확인할 것. 중복 이메일 오류 만들기." />
     <MESSAGE value="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
-    <option name="LAST_COMMIT_MESSAGE" value="10월 4일, 회원가입 완료. 중복 이메일 오류 만들기 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
+    <MESSAGE value="10월 10일, 로그인 완료. 로그아웃 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
+    <option name="LAST_COMMIT_MESSAGE" value="10월 10일, 로그인 완료. 로그아웃 완료. 오류 메세지 뜨는 formErrorsFragment 미적용 상태" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

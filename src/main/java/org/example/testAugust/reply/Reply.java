@@ -3,6 +3,7 @@ package org.example.testAugust.reply;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.testAugust.board.Board;
+import org.example.testAugust.member.OppuMember;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -19,6 +20,9 @@ public class Reply {
     //댓글 내용
     @Column
     private String content;
+
+    @ManyToOne
+    private OppuMember writer;
 
 //    //댓글 추천수
 //    private int recommendNumber;

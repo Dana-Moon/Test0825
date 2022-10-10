@@ -1,5 +1,6 @@
 package org.example.testAugust.board;
 
+import org.example.testAugust.member.OppuMember;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,9 @@ public interface BoardService {
 
     Board getBoardRequest(Long id);
 
-    void insertBoard(String category, String title, String nickname, String content);
+//    void insertBoard(String category, String title, String nickname, String content);
+
+    void insertBoard(String category, String title, OppuMember writer, String content);
 
 //    public List<Board> searchEmail(String boardSearch);
 

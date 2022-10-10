@@ -10,6 +10,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,12 +25,11 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 //Configuration : 스프리의 환경설정 파일임을 명시
 //EnableWebSecurity : 모든 요청 URL이 스프링 시큐리티의 제어를 받도록 만드는 어노테이션
 
-@RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    private final MemberSecurityService memberSecurityService;
     // "/**"는 모든 페이지 접근 가능 상태
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

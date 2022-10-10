@@ -2,6 +2,7 @@ package org.example.testAugust.board;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.testAugust.member.OppuMember;
 import org.example.testAugust.reply.Reply;
 
 import javax.persistence.*;
@@ -16,10 +17,10 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    //유저 닉네임 (이후 회원가입 시 이동할 예정)
-    @Column(length = 200, unique = true)
-    private String nickname;
+//
+//    //유저 닉네임 (이후 회원가입 시 이동할 예정)
+//    @Column(length = 200, unique = true)
+//    private String nickname;
 
     //게시글 카테고리
 //    @Column(nullable = false)
@@ -31,7 +32,8 @@ public class Board {
 
     //게시글 작성자
 //    @Column(nullable = false)
-    private String writer;
+    @ManyToOne
+    private OppuMember writer;
 
     //게시글 내용
 //    @Column(columnDefinition = "TEXT")

@@ -1,9 +1,12 @@
 package org.example.testAugust.member;
 
 import lombok.RequiredArgsConstructor;
+import org.example.testAugust.DataNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 
 @RequiredArgsConstructor
@@ -33,5 +36,14 @@ public class MemberServiceImpl implements MemberService{
         member.setPassword(passwordEncoder.encode(password));
         this.memberRepository.save(member);
         return member;
+    }
+
+    public OppuMember getMember(String username) {
+        Optional<OppuMember> member = this.memberRepository.findByUsername(username);
+        if (member.isPresent()) {
+            return member.get();
+        } else {
+            throw new DataNotFoundException("oppumember not found");
+        }
     }
 }

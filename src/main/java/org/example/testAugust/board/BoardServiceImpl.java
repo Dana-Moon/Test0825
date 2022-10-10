@@ -2,6 +2,7 @@ package org.example.testAugust.board;
 
 import lombok.RequiredArgsConstructor;
 import org.example.testAugust.DataNotFoundException;
+import org.example.testAugust.member.OppuMember;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -37,15 +38,25 @@ public class BoardServiceImpl implements BoardService {
     }
 
     //새글 쓰기
-    public void insertBoard(String category, String title, String nickname, String content) {
+    public void insertBoard(String category, String title, OppuMember writer, String content) {
         Board board = new Board();
         board.setCategory(category);
         board.setTitle(title);
-        board.setNickname(nickname);
+        board.setWriter(writer);
         board.setContent(content);
         board.setCreateDate(LocalDateTime.now());
         this.boardRepository.save(board);
     }
+
+//    public void insertBoard(String category, String title, String nickname, String content) {
+//        Board board = new Board();
+//        board.setCategory(category);
+//        board.setTitle(title);
+//        board.setNickname(nickname);
+//        board.setContent(content);
+//        board.setCreateDate(LocalDateTime.now());
+//        this.boardRepository.save(board);
+//    }
 
 //    public List<Board> searchEmail(String boardSearch) {
 //        return this.boardRepository.findBoardsByTitle(boardSearch);

@@ -37,8 +37,8 @@
                 <thead>
                     <tr>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">게시글 번호</th>
-                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">작성자</th>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">제목</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">작성자</th>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">등록일</th>
                         <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">조회수</th>
                     </tr>
@@ -46,11 +46,11 @@
                 <tbody>
                     <tr th:each="board : ${paging}">
                         <td class="px-4 py-3" th:text="${board.id}"></td>
-                        <td class="px-4 py-3" th:text="${board.nickname}"></td>
                         <td class="px-4 py-3">
                             <a th:href="@{|/board/getBoard/${board.id}|}" th:text="${board.title}"></a>
                             <span class="text-sm text-gray-600" th:if="|(${#lists.size(board.replyList) > 0})|" th:text="|(${#lists.size(board.replyList)})|"></span>
                         </td>
+                        <td class="px-4 py-3" th:if="${board.writer != null}" th:text="${board.writer.nickname}"></td>
                         <td class="px-4 py-3" th:text="${board.createDate}"></td>
                         <td class="px-4 py-3" th:text="조회수"></td>
                     </tr>

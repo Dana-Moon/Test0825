@@ -7,4 +7,6 @@ public interface MemberService {
 
 //    OppuMember insertMember(String userId, String nickname, String password, String email);
     OppuMember insertMember(String username, String nickname, String email, String password);
+
+    OppuMember getMember(String username);
 }
